@@ -1,0 +1,1138 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Валерий Васильевич Походеев</title>
+
+<meta name="description" content="История жизни Валерия Васильевича Походеева — краеведа, музейного работника и почётного донора Павлодара.">
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #101214;
+        color: #f2f2f2;
+        line-height: 1.7;
+    }
+
+
+    /* =========================
+       МЕНЮ
+    ========================= */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px 20px;
+
+        background: rgba(16, 18, 20, 0.92);
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        z-index: 1000;
+
+        text-align: center;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.08);
+    }
+
+    nav a {
+        color: #cccccc;
+        text-decoration: none;
+
+        margin: 0 12px;
+
+        font-size: 14px;
+
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #d6b36a;
+    }
+
+
+    /* =========================
+       ГЛАВНЫЙ ЭКРАН
+    ========================= */
+
+    .hero {
+
+        min-height: 100vh;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        padding:
+            110px 20px 70px;
+
+        background:
+            radial-gradient(
+                circle at top,
+                #34383d 0%,
+                #17191c 45%,
+                #101214 100%
+            );
+    }
+
+    .hero-content {
+
+        width: 100%;
+
+        max-width: 850px;
+    }
+
+
+    /* =========================
+       ФОТО
+    ========================= */
+
+    .photo {
+
+        display: block;
+
+        width: 150px !important;
+        height: 150px !important;
+
+        max-width: 150px !important;
+        max-height: 150px !important;
+
+        min-width: 150px !important;
+        min-height: 150px !important;
+
+        object-fit: cover;
+
+        /*
+           Кадр немного смещён вверх,
+           чтобы лицо и картина попали
+           в круг.
+        */
+
+        object-position: center 35%;
+
+        border-radius: 50%;
+
+        border: none;
+
+        margin:
+            0 auto 30px auto;
+
+        box-shadow:
+            0 0 35px
+            rgba(214,179,106,0.18);
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            clamp(38px, 7vw, 72px);
+
+        line-height: 1.1;
+
+        margin-bottom: 20px;
+
+        font-weight: 700;
+    }
+
+    .hero h1 span {
+        color: #d6b36a;
+    }
+
+    .hero p {
+
+        color: #c4c4c4;
+
+        font-size: 20px;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+    .years {
+
+        margin-top: 25px;
+
+        color: #d6b36a;
+
+        font-size: 18px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* =========================
+       ОСНОВНОЙ КОНТЕНТ
+    ========================= */
+
+    main {
+
+        max-width: 1000px;
+
+        margin: auto;
+
+        padding: 80px 20px;
+    }
+
+    section {
+
+        margin-bottom: 90px;
+
+        scroll-margin-top: 90px;
+    }
+
+    .section-title {
+
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        margin-bottom: 25px;
+    }
+
+    .section-title span {
+
+        color: #d6b36a;
+    }
+
+    .text {
+
+        color: #c8c8c8;
+
+        font-size: 17px;
+
+        max-width: 800px;
+    }
+
+    .text p {
+
+        margin-bottom: 18px;
+    }
+
+
+    /* =========================
+       КАРТОЧКИ
+    ========================= */
+
+    .cards {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+
+        gap: 18px;
+
+        margin-top: 30px;
+    }
+
+    .card {
+
+        background: #191c1f;
+
+        border:
+            1px solid
+            rgba(255,255,255,0.07);
+
+        border-radius: 18px;
+
+        padding: 25px;
+
+        transition: 0.3s;
+    }
+
+    .card:hover {
+
+        transform:
+            translateY(-5px);
+
+        border-color:
+            rgba(214,179,106,0.45);
+    }
+
+    .card .icon {
+
+        font-size: 30px;
+
+        margin-bottom: 15px;
+    }
+
+    .card h3 {
+
+        margin-bottom: 8px;
+
+        color: #ffffff;
+    }
+
+    .card p {
+
+        color: #aaaaaa;
+
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       ЦИТАТА
+    ========================= */
+
+    .quote {
+
+        margin-top: 35px;
+
+        padding: 30px;
+
+        background: #191c1f;
+
+        border-left:
+            4px solid #d6b36a;
+
+        border-radius:
+            0 15px 15px 0;
+
+        font-size: 20px;
+
+        font-style: italic;
+
+        color: #dddddd;
+    }
+
+
+    /* =========================
+       ТАЙМЛАЙН
+    ========================= */
+
+    .timeline {
+
+        border-left:
+            2px solid #d6b36a;
+
+        margin:
+            35px 0 0 10px;
+
+        padding-left: 30px;
+    }
+
+    .timeline-item {
+
+        margin-bottom: 35px;
+
+        position: relative;
+    }
+
+    .timeline-item::before {
+
+        content: "";
+
+        width: 12px;
+        height: 12px;
+
+        background: #d6b36a;
+
+        border-radius: 50%;
+
+        position: absolute;
+
+        left: -37px;
+
+        top: 9px;
+    }
+
+    .timeline-year {
+
+        color: #d6b36a;
+
+        font-weight: bold;
+
+        margin-bottom: 5px;
+    }
+
+    .timeline-item h3 {
+
+        margin-bottom: 5px;
+    }
+
+    .timeline-item p {
+
+        color: #aaaaaa;
+    }
+
+
+    /* =========================
+       СЕМЬЯ
+    ========================= */
+
+    .family {
+
+        text-align: center;
+
+        background:
+            linear-gradient(
+                135deg,
+                #191c1f,
+                #22262a
+            );
+
+        padding:
+            45px 25px;
+
+        border-radius: 25px;
+    }
+
+    .family p {
+
+        color: #bbbbbb;
+
+        max-width: 700px;
+
+        margin:
+            15px auto 0;
+    }
+
+
+    /* =========================
+       ФИНАЛ
+    ========================= */
+
+    .final {
+
+        text-align: center;
+
+        padding:
+            90px 20px;
+
+        background: #0b0d0f;
+
+        border-top:
+            1px solid
+            rgba(255,255,255,0.06);
+    }
+
+    .final h2 {
+
+        font-size: 40px;
+
+        margin-bottom: 20px;
+    }
+
+    .final h2 span {
+
+        color: #d6b36a;
+    }
+
+    .final p {
+
+        color: #aaaaaa;
+
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+        text-align: center;
+
+        padding: 25px;
+
+        color: #666666;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       МОБИЛЬНАЯ ВЕРСИЯ
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        nav {
+
+            padding: 13px 5px;
+        }
+
+        nav a {
+
+            margin: 0 5px;
+
+            font-size: 12px;
+        }
+
+        .hero {
+
+            padding:
+                100px 15px 60px;
+        }
+
+
+        /* Фото на телефоне */
+
+        .photo {
+
+            width: 120px !important;
+            height: 120px !important;
+
+            max-width: 120px !important;
+            max-height: 120px !important;
+
+            min-width: 120px !important;
+            min-height: 120px !important;
+
+            object-position:
+                center 35%;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .hero h1 {
+
+            font-size: 38px;
+        }
+
+        .hero p {
+
+            font-size: 17px;
+        }
+
+        .years {
+
+            font-size: 16px;
+        }
+
+
+        main {
+
+            padding:
+                60px 18px;
+        }
+
+        section {
+
+            margin-bottom:
+                65px;
+        }
+
+        .section-title {
+
+            font-size: 29px;
+        }
+
+        .text {
+
+            font-size: 16px;
+        }
+
+        .quote {
+
+            font-size: 17px;
+
+            padding: 22px;
+        }
+
+        .timeline {
+
+            padding-left: 25px;
+        }
+
+        .family {
+
+            padding:
+                35px 20px;
+        }
+
+        .final {
+
+            padding:
+                70px 20px;
+        }
+
+        .final h2 {
+
+            font-size: 32px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- =========================
+     МЕНЮ
+========================= -->
+
+<nav>
+
+```
+<a href="#about">
+    О нём
+</a>
+
+<a href="#history">
+    История
+</a>
+
+<a href="#donor">
+    Донорство
+</a>
+
+<a href="#family">
+    Семья
+</a>
+```
+
+</nav>
+
+<!-- =========================
+     ГЛАВНЫЙ ЭКРАН
+========================= -->
+
+<header class="hero">
+
+```
+<div class="hero-content">
+
+
+    <img
+        src="dedushka.jpg"
+        alt="Валерий Васильевич Походеев"
+        class="photo"
+    >
+
+
+    <h1>
+
+        Валерий<br>
+
+        <span>
+            Васильевич Походеев
+        </span>
+
+    </h1>
+
+
+    <p>
+
+        Краевед, музейный работник,
+        почётный донор и просто человек
+        с большой историей.
+
+    </p>
+
+
+    <div class="years">
+
+        1956 — 2026
+
+    </div>
+
+
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<!-- =========================
+     О ЧЕЛОВЕКЕ
+========================= -->
+
+<section id="about">
+
+    <h2 class="section-title">
+
+        Человек и его
+        <span>история</span>
+
+    </h2>
+
+
+    <div class="text">
+
+        <p>
+
+            Валерий Васильевич Походеев
+            родился 28 июля 1956 года.
+
+        </p>
+
+
+        <p>
+
+            Его жизнь во многом связана
+            с Павлодаром, историей родного
+            края и людьми.
+
+        </p>
+
+
+        <p>
+
+            История всегда была одной
+            из главных его увлечённостей.
+
+            На протяжении многих лет
+            Валерий Васильевич занимался
+            краеведением и работал
+            экскурсоводом в краеведческом
+            музее.
+
+        </p>
+
+
+        <p>
+
+            Он рассказывал людям об истории
+            города и родного края, помогая
+            сохранять память о прошлом.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ФАКТЫ
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Несколько
+        <span>фактов</span>
+
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                🏛️
+            </div>
+
+            <h3>
+                Краеведение
+            </h3>
+
+            <p>
+
+                Интерес к истории Павлодара
+                и родного края.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                📚
+            </div>
+
+            <h3>
+                История
+            </h3>
+
+            <p>
+
+                Любовь к историческим событиям
+                и прошлому.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🩸
+            </div>
+
+            <h3>
+                Донорство
+            </h3>
+
+            <p>
+
+                Почётный донор
+                города Павлодара.
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                👨‍👩‍👧‍👦
+            </div>
+
+            <h3>
+                Семья
+            </h3>
+
+            <p>
+
+                Татьяна, Денис, Яна
+                и внук Никита.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ИСТОРИЯ
+========================= -->
+
+<section id="history">
+
+    <h2 class="section-title">
+
+        История, которой он
+        <span>живёт</span>
+
+    </h2>
+
+
+    <div class="text">
+
+        <p>
+
+            Для Валерия Васильевича история —
+            это не просто даты в учебнике.
+
+            Это судьбы людей, события и места,
+            которые сделали наш край таким,
+            каким мы знаем его сегодня.
+
+        </p>
+
+
+        <p>
+
+            Работая экскурсоводом, он делился
+            своими знаниями с другими людьми
+            и помогал сохранять память
+            о родном городе.
+
+        </p>
+
+    </div>
+
+
+    <div class="quote">
+
+        Есть вещи, которые нельзя потерять —
+        память о людях, событиях и месте,
+        которое называешь своим домом.
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ТАЙМЛАЙН
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Некоторые
+        <span>главы жизни</span>
+
+    </h2>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                1956
+            </div>
+
+            <h3>
+                Рождение
+            </h3>
+
+            <p>
+
+                28 июля родился
+                Валерий Васильевич
+                Походеев.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                Жизнь
+            </div>
+
+            <h3>
+                История и краеведение
+            </h3>
+
+            <p>
+
+                Увлечение историей и работа,
+                связанная с сохранением памяти
+                о родном крае.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                Многие годы
+            </div>
+
+            <h3>
+                Донорство
+            </h3>
+
+            <p>
+
+                Регулярная сдача крови
+                и помощь людям.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-year">
+                2026
+            </div>
+
+            <h3>
+                70 лет
+            </h3>
+
+            <p>
+
+                Ещё одна большая глава жизни,
+                но далеко не последняя.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ДОНОРСТВО
+========================= -->
+
+<section id="donor">
+
+    <h2 class="section-title">
+
+        <span>Донорство</span>
+
+    </h2>
+
+
+    <div class="text">
+
+        <p>
+
+            Валерий Васильевич —
+            почётный донор города Павлодара.
+
+        </p>
+
+
+        <p>
+
+            На протяжении многих лет
+            он сдавал кровь, помогая людям,
+            которым была необходима
+            медицинская помощь.
+
+        </p>
+
+
+        <p>
+
+            Это история не о наградах.
+            Это история о желании помочь
+            другому человеку.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     СЕМЬЯ
+========================= -->
+
+<section id="family">
+
+    <div class="family">
+
+        <h2 class="section-title">
+
+            Самое
+            <span>главное</span>
+
+        </h2>
+
+
+        <p>
+
+            За всеми историями, работой
+            и достижениями есть то,
+            что действительно остаётся рядом —
+            семья.
+
+        </p>
+
+
+        <p>
+
+            Жена Татьяна, дети Денис и Яна,
+            и внук Никита.
+
+        </p>
+
+
+        <p>
+
+            Бывают споры, бывают громкие
+            разговоры, особенно с бабушкой.
+
+            Иногда можно и поругаться —
+            главное, что в конце концов
+            все остаются одной семьёй.
+
+        </p>
+
+
+        <p>
+
+            Потому что любовь в семье —
+            это не отсутствие разногласий.
+
+            Это когда, несмотря ни на что,
+            вы всё равно остаётесь рядом.
+
+        </p>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- =========================
+     ФИНАЛ
+========================= -->
+
+<div class="final">
+
+```
+<h2>
+
+    Спасибо тебе,
+    <span>дед.</span>
+
+</h2>
+
+
+<p>
+
+    Этот сайт создан Никитой —
+    в подарок человеку, которого
+    невозможно описать одной страницей.
+
+</p>
+```
+
+</div>
+
+<footer>
+
+```
+© 2026 Валерий Васильевич Походеев
+```
+
+</footer>
+
+</body>
+
+</html>
