@@ -1,913 +1,1818 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Валерий Васильевич Походеев</title>
-
-    <meta name="description" content="История жизни Валерия Васильевича Походеева — краеведа, музейного работника и почётного донора Павлодара.">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #101214;
-            color: #f2f2f2;
-            line-height: 1.7;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 16px 20px;
-            background: rgba(16, 18, 20, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            z-index: 1000;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        nav a {
-            color: #cccccc;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #d6b36a;
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 110px 20px 70px;
-            background: radial-gradient(circle at top, #34383d 0%, #17191c 45%, #101214 100%);
-        }
-
-        .hero-content {
-            width: 100%;
-            max-width: 850px;
-        }
-
-        .photo {
-            display: block;
-            width: 150px !important;
-            height: 150px !important;
-            max-width: 150px !important;
-            max-height: 150px !important;
-            min-width: 150px !important;
-            min-height: 150px !important;
-            object-fit: cover;
-            object-position: center 35%;
-            border-radius: 50%;
-            border: none;
-            margin: 0 auto 30px auto;
-            box-shadow: 0 0 35px rgba(214,179,106,0.18);
-        }
-
-        .hero h1 {
-            font-size: clamp(38px, 7vw, 72px);
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero h1 span {
-            color: #d6b36a;
-        }
-
-        .hero p {
-            color: #c4c4c4;
-            font-size: 20px;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .years {
-            margin-top: 25px;
-            color: #d6b36a;
-            font-size: 18px;
-            letter-spacing: 2px;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 80px 20px;
-        }
-
-        section {
-            margin-bottom: 90px;
-            scroll-margin-top: 90px;
-        }
-
-        .section-title {
-            font-size: 34px;
-            line-height: 1.2;
-            margin-bottom: 25px;
-        }
-
-        .section-title span {
-            color: #d6b36a;
-        }
-
-        .text {
-            color: #c8c8c8;
-            font-size: 17px;
-            max-width: 800px;
-        }
-
-        .text p {
-            margin-bottom: 18px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background: #191c1f;
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 18px;
-            padding: 25px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(214,179,106,0.45);
-        }
-
-        .card .icon {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-
-        .card p {
-            color: #aaaaaa;
-            font-size: 15px;
-        }
-
-        .quote {
-            margin-top: 35px;
-            padding: 30px;
-            background: #191c1f;
-            border-left: 4px solid #d6b36a;
-            border-radius: 0 15px 15px 0;
-            font-size: 20px;
-            font-style: italic;
-            color: #dddddd;
-        }
-
-        .timeline {
-            border-left: 2px solid #d6b36a;
-            margin: 35px 0 0 10px;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            margin-bottom: 35px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: "";
-            width: 12px;
-            height: 12px;
-            background: #d6b36a;
-            border-radius: 50%;
-            position: absolute;
-            left: -37px;
-            top: 9px;
-        }
-
-        .timeline-year {
-            color: #d6b36a;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .timeline-item h3 {
-            margin-bottom: 5px;
-        }
-
-        .timeline-item p {
-            color: #aaaaaa;
-        }
-
-        .family {
-            text-align: center;
-            background: linear-gradient(135deg, #191c1f, #22262a);
-            padding: 45px 25px;
-            border-radius: 25px;
-        }
-
-        .family p {
-            color: #bbbbbb;
-            max-width: 700px;
-            margin: 15px auto 0;
-        }
-
-        /* =========================
-           ПЕСНЯ
-        ========================= */
-
-        .song-section {
-            scroll-margin-top: 90px;
-        }
-
-        .song-card {
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 85% 10%, rgba(214,179,106,0.14), transparent 35%),
-                linear-gradient(135deg, #191c1f, #22262a);
-            border: 1px solid rgba(214,179,106,0.20);
-            border-radius: 25px;
-            padding: 38px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.20);
-        }
-
-        .song-card::before {
-            content: "♪";
-            position: absolute;
-            right: 30px;
-            top: -25px;
-            font-size: 150px;
-            color: rgba(214,179,106,0.045);
-            pointer-events: none;
-        }
-
-        .song-label {
-            color: #d6b36a;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-
-        .song-title {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .song-subtitle {
-            color: #aaaaaa;
-            margin-bottom: 28px;
-        }
-
-        .player {
-            position: relative;
-            z-index: 2;
-            background: rgba(10,12,14,0.62);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 20px;
-            padding: 22px;
-        }
-
-        .player-top {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        .play-button {
-            width: 58px;
-            height: 58px;
-            flex: 0 0 58px;
-            border: none;
-            border-radius: 50%;
-            background: #d6b36a;
-            color: #101214;
-            font-size: 23px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .play-button:hover {
-            transform: scale(1.06);
-            box-shadow: 0 0 25px rgba(214,179,106,0.25);
-        }
-
-        .track-name {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .track-status {
-            color: #888;
-            font-size: 13px;
-            margin-top: 2px;
-        }
-
-        .progress-area {
-            margin-top: 20px;
-        }
-
-        .progress {
-            width: 100%;
-            height: 5px;
-            appearance: none;
-            -webkit-appearance: none;
-            background: #3a3e42;
-            border-radius: 10px;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .progress::-webkit-slider-thumb {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #d6b36a;
-            cursor: pointer;
-        }
-
-        .progress::-moz-range-thumb {
-            width: 14px;
-            height: 14px;
-            border: none;
-            border-radius: 50%;
-            background: #d6b36a;
-            cursor: pointer;
-        }
-
-        .time-row {
-            display: flex;
-            justify-content: space-between;
-            color: #858585;
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .player-bottom {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .volume-icon {
-            font-size: 17px;
-        }
-
-        .volume {
-            width: 110px;
-            height: 4px;
-            accent-color: #d6b36a;
-            cursor: pointer;
-        }
-
-        .song-note {
-            color: #888;
-            font-size: 13px;
-            margin-top: 18px;
-        }
-
-        .final {
-            text-align: center;
-            padding: 90px 20px;
-            background: #0b0d0f;
-            border-top: 1px solid rgba(255,255,255,0.06);
-        }
-
-        .final h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .final h2 span {
-            color: #d6b36a;
-        }
-
-        .final p {
-            color: #aaaaaa;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #666666;
-            font-size: 13px;
-        }
-
-        @media (max-width: 600px) {
-            nav {
-                padding: 13px 5px;
-                white-space: nowrap;
-                overflow-x: auto;
-            }
-
-            nav a {
-                margin: 0 5px;
-                font-size: 12px;
-            }
-
-            .hero {
-                padding: 100px 15px 60px;
-            }
-
-            .photo {
-                width: 120px !important;
-                height: 120px !important;
-                max-width: 120px !important;
-                max-height: 120px !important;
-                min-width: 120px !important;
-                min-height: 120px !important;
-                object-position: center 35%;
-                margin-bottom: 25px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .years {
-                font-size: 16px;
-            }
-
-            main {
-                padding: 60px 18px;
-            }
-
-            section {
-                margin-bottom: 65px;
-            }
-
-            .section-title {
-                font-size: 29px;
-            }
-
-            .text {
-                font-size: 16px;
-            }
-
-            .quote {
-                font-size: 17px;
-                padding: 22px;
-            }
-
-            .timeline {
-                padding-left: 25px;
-            }
-
-            .family {
-                padding: 35px 20px;
-            }
-
-            .final {
-                padding: 70px 20px;
-            }
-
-            .final h2 {
-                font-size: 32px;
-            }
-
-            .song-card {
-                padding: 25px 18px;
-            }
-
-            .song-title {
-                font-size: 27px;
-            }
-
-            .player {
-                padding: 18px;
-            }
-
-            .volume {
-                width: 85px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Валерий Васильевич Походеев</title>
+
+<meta name="description" content="История жизни Валерия Васильевича Походеева — краеведа, музейного работника, почётного донора и человека, посвятившего часть своей жизни сохранению истории Павлодара.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101214;
+    color: #f2f2f2;
+    line-height: 1.7;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(16, 18, 20, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+nav a {
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d6b36a;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 110px 20px 70px;
+    background: radial-gradient(
+        circle at top,
+        #34383d 0%,
+        #17191c 45%,
+        #101214 100%
+    );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.photo {
+    display: block;
+    width: 150px !important;
+    height: 150px !important;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    min-width: 150px !important;
+    min-height: 150px !important;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 50%;
+    border: none;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 35px rgba(214,179,106,0.18);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #d6b36a;
+}
+
+.hero p {
+    color: #c4c4c4;
+    font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.years {
+    margin-top: 25px;
+    color: #d6b36a;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+MAIN
+========================= */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+section {
+    margin-bottom: 90px;
+    scroll-margin-top: 90px;
+}
+
+.section-title {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.section-title span {
+    color: #d6b36a;
+}
+
+.text {
+    color: #c8c8c8;
+    font-size: 17px;
+    max-width: 800px;
+}
+
+.text p {
+    margin-bottom: 18px;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #191c1f;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214,179,106,0.45);
+}
+
+.card .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.card p {
+    color: #aaaaaa;
+    font-size: 15px;
+}
+
+/* =========================
+QUOTE
+========================= */
+
+.quote {
+    margin-top: 35px;
+    padding: 30px;
+    background: #191c1f;
+    border-left: 4px solid #d6b36a;
+    border-radius: 0 15px 15px 0;
+    font-size: 20px;
+    font-style: italic;
+    color: #dddddd;
+}
+
+/* =========================
+TIMELINE
+========================= */
+
+.timeline {
+    border-left: 2px solid #d6b36a;
+    margin: 35px 0 0 10px;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #d6b36a;
+    border-radius: 50%;
+    position: absolute;
+    left: -37px;
+    top: 9px;
+}
+
+.timeline-year {
+    color: #d6b36a;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #aaaaaa;
+}
+
+/* =========================
+INFO BLOCKS
+========================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.info-card {
+    background: linear-gradient(
+        145deg,
+        #191c1f,
+        #202428
+    );
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(214,179,106,0.4);
+}
+
+.info-card .info-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+.info-card strong {
+    color: #d6b36a;
+}
+
+/* =========================
+PUBLICATIONS
+========================= */
+
+.publication-box {
+    margin-top: 30px;
+    background: #191c1f;
+    border-radius: 22px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.publication-number {
+    font-size: 42px;
+    color: #d6b36a;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.publication-box h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.publication-box p {
+    color: #aaa;
+    font-size: 16px;
+}
+
+.publication-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.publication-tag {
+    padding: 7px 13px;
+    border-radius: 20px;
+    background: rgba(214,179,106,0.08);
+    border: 1px solid rgba(214,179,106,0.2);
+    color: #d6b36a;
+    font-size: 13px;
+}
+
+/* =========================
+OLD AWARD BLOCKS
+========================= */
+
+.award {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 22px;
+    background: #191c1f;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.award-icon {
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.award h3 {
+    margin-bottom: 5px;
+}
+
+.award p {
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* =========================
+ФОТОГРАФИИ ЗНАЧКОВ
+========================= */
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.badge-card {
+    background: #191c1f;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 18px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.badge-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214,179,106,0.45);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.badge-photo {
+    width: 100%;
+    height: 280px;
+
+    display: block;
+
+    object-fit: contain;
+
+    background: #22262a;
+
+    border-radius: 14px;
+
+    cursor: zoom-in;
+
+    transition: transform 0.3s ease;
+
+    padding: 8px;
+}
+
+.badge-photo:hover {
+    transform: scale(1.015);
+}
+
+.badge-info {
+    padding: 18px 5px 5px;
+}
+
+.badge-info h3 {
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.badge-info p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* =========================
+FAMILY
+========================= */
+
+.family {
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #191c1f,
+        #22262a
+    );
+    padding: 45px 25px;
+    border-radius: 25px;
+}
+
+.family p {
+    color: #bbbbbb;
+    max-width: 700px;
+    margin: 15px auto 0;
+}
+
+/* =========================
+SONG
+========================= */
+
+.song-section {
+    scroll-margin-top: 90px;
+}
+
+.song-card {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(
+        circle at 85% 10%,
+        rgba(214,179,106,0.14),
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #191c1f,
+        #22262a
+    );
+    border: 1px solid rgba(214,179,106,0.20);
+    border-radius: 25px;
+    padding: 38px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.20);
+}
+
+.song-card::before {
+    content: "♪";
+    position: absolute;
+    right: 30px;
+    top: -25px;
+    font-size: 150px;
+    color: rgba(214,179,106,0.045);
+    pointer-events: none;
+}
+
+.song-label {
+    color: #d6b36a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.song-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.song-subtitle {
+    color: #aaaaaa;
+    margin-bottom: 28px;
+}
+
+.player {
+    position: relative;
+    z-index: 2;
+    background: rgba(10,12,14,0.62);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 22px;
+}
+
+.player-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.play-button {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    border: none;
+    border-radius: 50%;
+    background: #d6b36a;
+    color: #101214;
+    font-size: 23px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.play-button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(214,179,106,0.25);
+}
+
+.track-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.track-status {
+    color: #888;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.progress-area {
+    margin-top: 20px;
+}
+
+.progress {
+    width: 100%;
+    height: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #3a3e42;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.progress::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #d6b36a;
+    cursor: pointer;
+}
+
+.progress::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: none;
+    border-radius: 50%;
+    background: #d6b36a;
+    cursor: pointer;
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    color: #858585;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.player-bottom {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.volume-icon {
+    font-size: 17px;
+}
+
+.volume {
+    width: 110px;
+    height: 4px;
+    accent-color: #d6b36a;
+    cursor: pointer;
+}
+
+.song-note {
+    color: #888;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* =========================
+FINAL
+========================= */
+
+.final {
+    text-align: center;
+    padding: 90px 20px;
+    background: #0b0d0f;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.final h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.final h2 span {
+    color: #d6b36a;
+}
+
+.final p {
+    color: #aaaaaa;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666666;
+    font-size: 13px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 13px 5px;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 100px 15px 60px;
+    }
+
+    .photo {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        object-position: center 35%;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .years {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 60px 18px;
+    }
+
+    section {
+        margin-bottom: 65px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    .quote {
+        font-size: 17px;
+        padding: 22px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
+
+    .publication-box {
+        padding: 24px;
+    }
+
+    .family {
+        padding: 35px 20px;
+    }
+
+    .final {
+        padding: 70px 20px;
+    }
+
+    .final h2 {
+        font-size: 32px;
+    }
+
+    .song-card {
+        padding: 25px 18px;
+    }
+
+    .song-title {
+        font-size: 27px;
+    }
+
+    .player {
+        padding: 18px;
+    }
+
+    .volume {
+        width: 85px;
+    }
+
+    /* Значки на телефоне */
+
+    .badges-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .badge-photo {
+        height: 250px;
+    }
+
+}
+</style>
 </head>
 
 <body>
 
+<!-- =========================
+NAVIGATION
+========================= -->
+
 <nav>
-    <a href="#about">О нём</a>
-    <a href="#history">История</a>
-    <a href="#donor">Донорство</a>
-    <a href="#family">Семья</a>
-    <a href="#song">🎵 Песня</a>
+
+<a href="#about">О нём</a>
+<a href="#life">Жизненный путь</a>
+<a href="#work">Работа</a>
+<a href="#articles">Публикации</a>
+<a href="#donor">Донорство</a>
+<a href="#family">Семья</a>
+<a href="#song">🎵 Песня</a>
+
 </nav>
 
+<!-- =========================
+HERO
+========================= -->
+
 <header class="hero">
-    <div class="hero-content">
-        <img
-            src="dedushka.jpg"
-            alt="Валерий Васильевич Походеев"
-            class="photo"
-        >
 
-        <h1>
-            Валерий<br>
-            <span>Васильевич Походеев</span>
-        </h1>
+<div class="hero-content">
 
-        <p>
-            Краевед, музейный работник,
-            почётный донор и просто человек
-            с большой историей.
-        </p>
+<img
+src="dedushka.jpg"
+alt="Валерий Васильевич Походеев"
+class="photo"
+>
 
-        <div class="years">
-            1956 — 2026
-        </div>
-    </div>
+<h1>
+Валерий<br>
+<span>
+Васильевич Походеев
+</span>
+</h1>
+
+<p>
+Краевед, музейный работник, почётный донор и просто человек с большой историей.
+</p>
+
+<div class="years">
+1956 — 2026
+</div>
+
+</div>
+
 </header>
 
 <main>
 
+<!-- =========================
+О НЁМ
+========================= -->
+
 <section id="about">
-    <h2 class="section-title">
-        Человек и его <span>история</span>
-    </h2>
 
-    <div class="text">
-        <p>Валерий Васильевич Походеев родился 28 июля 1956 года.</p>
+<h2 class="section-title">
+Человек и его <span>история</span>
+</h2>
 
-        <p>
-            Его жизнь во многом связана с Павлодаром, историей родного
-            края и людьми.
-        </p>
+<div class="text">
 
-        <p>
-            История всегда была одной из главных его увлечённостей.
-            На протяжении многих лет Валерий Васильевич занимался
-            краеведением и работал экскурсоводом в краеведческом музее.
-        </p>
+<p>
+Валерий Васильевич Походеев родился 28 июля 1956 года в городе Павлодаре Казахской ССР.
+</p>
 
-        <p>
-            Он рассказывал людям об истории города и родного края,
-            помогая сохранять память о прошлом.
-        </p>
-    </div>
-</section>
+<p>
+Его жизнь во многом связана с Павлодаром, историей родного края и людьми.
+</p>
 
-<section>
-    <h2 class="section-title">
-        Несколько <span>фактов</span>
-    </h2>
+<p>
+История всегда была одной из главных его увлечённостей. На протяжении многих лет Валерий Васильевич занимался краеведением, работал в музее и проводил экскурсии.
+</p>
 
-    <div class="cards">
-        <div class="card">
-            <div class="icon">🏛️</div>
-            <h3>Краеведение</h3>
-            <p>Интерес к истории Павлодара и родного края.</p>
-        </div>
+<p>
+Он рассказывал людям об истории города и родного края, помогая сохранять память о прошлом.
+</p>
 
-        <div class="card">
-            <div class="icon">📚</div>
-            <h3>История</h3>
-            <p>Любовь к историческим событиям и прошлому.</p>
-        </div>
+</div>
 
-        <div class="card">
-            <div class="icon">🩸</div>
-            <h3>Донорство</h3>
-            <p>Почётный донор города Павлодара.</p>
-        </div>
-
-        <div class="card">
-            <div class="icon">👨‍👩‍👧‍👦</div>
-            <h3>Семья</h3>
-            <p>Татьяна, Денис, Яна и внук Никита.</p>
-        </div>
-    </div>
-</section>
-
-<section id="history">
-    <h2 class="section-title">
-        История, которой он <span>живёт</span>
-    </h2>
-
-    <div class="text">
-        <p>
-            Для Валерия Васильевича история — это не просто даты в учебнике.
-            Это судьбы людей, события и места, которые сделали наш край таким,
-            каким мы знаем его сегодня.
-        </p>
-
-        <p>
-            Работая экскурсоводом, он делился своими знаниями с другими людьми
-            и помогал сохранять память о родном городе.
-        </p>
-    </div>
-
-    <div class="quote">
-        Есть вещи, которые нельзя потерять —
-        память о людях, событиях и месте,
-        которое называешь своим домом.
-    </div>
-</section>
-
-<section>
-    <h2 class="section-title">
-        Некоторые <span>главы жизни</span>
-    </h2>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-year">1956</div>
-            <h3>Рождение</h3>
-            <p>28 июля родился Валерий Васильевич Походеев.</p>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-year">Жизнь</div>
-            <h3>История и краеведение</h3>
-            <p>
-                Увлечение историей и работа, связанная с сохранением
-                памяти о родном крае.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-year">Многие годы</div>
-            <h3>Донорство</h3>
-            <p>Регулярная сдача крови и помощь людям.</p>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-year">2026</div>
-            <h3>70 лет</h3>
-            <p>Ещё одна большая глава жизни, но далеко не последняя.</p>
-        </div>
-    </div>
-</section>
-
-<section id="donor">
-    <h2 class="section-title">
-        <span>Донорство</span>
-    </h2>
-
-    <div class="text">
-        <p>
-            Валерий Васильевич — почётный донор города Павлодара.
-        </p>
-
-        <p>
-            На протяжении многих лет он сдавал кровь, помогая людям,
-            которым была необходима медицинская помощь.
-        </p>
-
-        <p>
-            Это история не о наградах. Это история о желании помочь
-            другому человеку.
-        </p>
-    </div>
-</section>
-
-<section id="family">
-    <div class="family">
-        <h2 class="section-title">
-            Самое <span>главное</span>
-        </h2>
-
-        <p>
-            За всеми историями, работой и достижениями есть то,
-            что действительно остаётся рядом — семья.
-        </p>
-
-        <p>
-            Жена Татьяна, дети Денис и Яна, и внук Никита.
-        </p>
-
-        <p>
-            Бывают споры, бывают громкие разговоры, особенно с бабушкой.
-            Иногда можно и поругаться — главное, что в конце концов
-            все остаются одной семьёй.
-        </p>
-
-        <p>
-            Потому что любовь в семье — это не отсутствие разногласий.
-            Это когда, несмотря ни на что, вы всё равно остаётесь рядом.
-        </p>
-    </div>
 </section>
 
 <!-- =========================
-     ПЕСНЯ О ДЕДУШКЕ
+ФАКТЫ
+========================= -->
+
+<section>
+
+<h2 class="section-title">
+Несколько <span>фактов</span>
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">🏛️</div>
+
+<h3>
+Краеведение
+</h3>
+
+<p>
+Интерес к истории Павлодара и родного края.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📚</div>
+
+<h3>
+История
+</h3>
+
+<p>
+Исследование исторических событий и судеб людей.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🩸</div>
+
+<h3>
+Донорство
+</h3>
+
+<p>
+Почётный донор города Павлодара.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">👨‍👩‍👧‍👦</div>
+
+<h3>
+Семья
+</h3>
+
+<p>
+Татьяна, Денис, Яна и внук Никита.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ЖИЗНЕННЫЙ ПУТЬ
+========================= -->
+
+<section id="life">
+
+<h2 class="section-title">
+Жизненный <span>путь</span>
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+1956
+</div>
+
+<h3>
+Рождение
+</h3>
+
+<p>
+28 июля родился Валерий Васильевич Походеев в Павлодаре.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+Образование
+</div>
+
+<h3>
+Учёба
+</h3>
+
+<p>
+Учился в Павлодарской средней школе №7, железнодорожном училище №180 и Павлодарском медицинском училище.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+1982 — 1984
+</div>
+
+<h3>
+Военная служба
+</h3>
+
+<p>
+Проходил военную службу на Дальнем Востоке, в городе Уссурийске, в военно-строительном отряде.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+1990-е
+</div>
+
+<h3>
+Начало работы в музее
+</h3>
+
+<p>
+Работал в областном историко-краеведческом музее имени Н. Потанина и занимался экскурсионной работой.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+Многие годы
+</div>
+
+<h3>
+История и краеведение
+</h3>
+
+<p>
+Исследовал историю родного края, собирал материалы и делился ими с другими людьми.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+2026
+</div>
+
+<h3>
+70 лет
+</h3>
+
+<p>
+Большая жизнь, наполненная работой, историей, людьми и семьёй.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ОБРАЗОВАНИЕ
+========================= -->
+
+<section>
+
+<h2 class="section-title">
+<span>Образование</span>
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="info-icon">
+🏫
+</div>
+
+<h3>
+Средняя школа
+</h3>
+
+<p>
+Павлодарская средняя школа №7.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-icon">
+🚂
+</div>
+
+<h3>
+Железнодорожное училище
+</h3>
+
+<p>
+Железнодорожное училище №180.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-icon">
+📖
+</div>
+
+<h3>
+Медицинское училище
+</h3>
+
+<p>
+В дальнейшем обучался в Павлодарском медицинском училище и прошёл курсы экскурсоводов.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ИСТОРИЯ
+========================= -->
+
+<section>
+
+<h2 class="section-title">
+История, которой он <span>живёт</span>
+</h2>
+
+<div class="text">
+
+<p>
+Для Валерия Васильевича история — это не просто даты в учебнике. Это судьбы людей, события и места, которые сделали наш край таким, каким мы знаем его сегодня.
+</p>
+
+<p>
+Работая экскурсоводом, он делился своими знаниями с другими людьми и помогал сохранять память о родном городе.
+</p>
+
+</div>
+
+<div class="quote">
+
+Есть вещи, которые нельзя потерять — память о людях, событиях и месте, которое называешь своим домом.
+
+</div>
+
+</section>
+
+<!-- =========================
+ТРУДОВОЙ ПУТЬ
+========================= -->
+
+<section id="work">
+
+<h2 class="section-title">
+Трудовой <span>путь</span>
+</h2>
+
+<div class="text">
+
+<p>
+За годы работы Валерий Васильевич трудился в различных организациях Павлодара.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="info-icon">
+🏛️
+</div>
+
+<h3>
+Краеведческий музей
+</h3>
+
+<p>
+Областной историко-краеведческий музей имени Н. Потанина.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-icon">
+🏭
+</div>
+
+<h3>
+Предприятия Павлодара
+</h3>
+
+<p>
+Работал на предприятиях и в организациях города на протяжении многих лет.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="info-icon">
+🎤
+</div>
+
+<h3>
+Экскурсионная работа
+</h3>
+
+<p>
+Проводил экскурсии и рассказывал людям об истории родного края.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ПУБЛИКАЦИИ
+========================= -->
+
+<section id="articles">
+
+<h2 class="section-title">
+Краеведение и <span>публикации</span>
+</h2>
+
+<div class="publication-box">
+
+<div class="publication-number">
+50+
+</div>
+
+<h3>
+Статей и заметок
+</h3>
+
+<p>
+Валерий Васильевич написал более 50 статей и заметок, посвящённых ветеранам, Великой Отечественной войне, истории Павлодара и судьбам земляков.
+</p>
+
+<div class="publication-tags">
+
+<div class="publication-tag">
+История Павлодара
+</div>
+
+<div class="publication-tag">
+Великая Отечественная война
+</div>
+
+<div class="publication-tag">
+Ветераны
+</div>
+
+<div class="publication-tag">
+Истории земляков
+</div>
+
+</div>
+
+</div>
+
+<div class="text" style="margin-top: 25px;">
+
+<p>
+Его материалы публиковались в областной газете «Звезда Прииртышья», ветеранской газете «Ардагер» и других изданиях.
+</p>
+
+<p>
+Среди работ — материалы о памяти края, железнодорожниках, ветеранах, донорах и людях, чьи судьбы связаны с Павлодаром.
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+НАГРАДЫ
+========================= -->
+
+<section>
+
+<h2 class="section-title">
+<span>Награды</span> и признание
+</h2>
+
+<!-- Основные награды -->
+
+<div class="award">
+
+<div class="award-icon">
+🏅
+</div>
+
+<div>
+
+<h3>
+Почётный донор
+</h3>
+
+<p>
+За многолетнее донорство и помощь людям.
+</p>
+
+</div>
+
+</div>
+
+<div class="award">
+
+<div class="award-icon">
+🎖️
+</div>
+
+<div>
+
+<h3>
+Нагрудный знак
+</h3>
+
+<p>
+Отмечен нагрудным знаком за вклад в систему здравоохранения.
+</p>
+
+</div>
+
+</div>
+
+<div class="award">
+
+<div class="award-icon">
+📜
+</div>
+
+<div>
+
+<h3>
+Благодарности и грамоты
+</h3>
+
+<p>
+За общественную деятельность и вклад в сохранение исторической памяти.
+</p>
+
+</div>
+
+</div>
+
+<!-- Фотографии настоящих значков -->
+
+<div class="badges-grid">
+
+<!-- ЗНАЧОК СУТ -->
+
+<div class="badge-card">
+
+<img
+src="sut.jpg"
+alt="Значок СУТ"
+class="badge-photo"
+>
+
+<div class="badge-info">
+
+<h3>
+Значок «СУТ»
+</h3>
+
+<p>
+Жёлто-голубой овальный знак с надписью «СУТ» и изображением волн и листьев.
+</p>
+
+</div>
+
+</div>
+
+<!-- ВОЕННЫЙ ШЕВРОН -->
+
+<div class="badge-card">
+
+<img
+src="shevron.jpg"
+alt="Военный и производственный шеврон"
+class="badge-photo"
+>
+
+<div class="badge-info">
+
+<h3>
+Военный и производственный шеврон
+</h3>
+
+<p>
+Знак с красной звездой, золотыми серпом и молотом, символикой производства и военной службы.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ДОНОРСТВО
+========================= -->
+
+<section id="donor">
+
+<h2 class="section-title">
+<span>Донорство</span>
+</h2>
+
+<div class="text">
+
+<p>
+Валерий Васильевич — почётный донор города Павлодара.
+</p>
+
+<p>
+На протяжении многих лет он сдавал кровь, помогая людям, которым была необходима медицинская помощь.
+</p>
+
+<p>
+Это история не о наградах. Это история о желании помочь другому человеку.
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+СЕМЬЯ
+========================= -->
+
+<section id="family">
+
+<div class="family">
+
+<h2 class="section-title">
+Самое <span>главное</span>
+</h2>
+
+<p>
+За всеми историями, работой и достижениями есть то, что действительно остаётся рядом — семья.
+</p>
+
+<p>
+Жена Татьяна, дети Денис и Яна, и внук Никита.
+</p>
+
+<p>
+Бывают споры, бывают громкие разговоры, особенно с бабушкой. Иногда можно и поругаться — главное, что в конце концов все остаются одной семьёй.
+</p>
+
+<p>
+Потому что любовь в семье — это не отсутствие разногласий. Это когда, несмотря ни на что, вы всё равно остаётесь рядом.
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+ПЕСНЯ
 ========================= -->
 
 <section id="song" class="song-section">
 
-    <h2 class="section-title">
-        Память в <span>музыке</span>
-    </h2>
+<h2 class="section-title">
+Память в <span>музыке</span>
+</h2>
 
-    <div class="song-card">
+<div class="song-card">
 
-        <div class="song-label">Особенная глава</div>
+<div class="song-label">
+Особенная глава
+</div>
 
-        <h2 class="song-title">Песня о дедушке</h2>
+<h2 class="song-title">
+Песня о дедушке
+</h2>
 
-        <p class="song-subtitle">
-            Музыка, посвящённая Валерию Васильевичу.
-        </p>
+<p class="song-subtitle">
+Музыка, посвящённая Валерию Васильевичу.
+</p>
 
-        <div class="player">
+<div class="player">
 
-            <audio id="songAudio" preload="metadata">
-                <source src="dedushka-song.mp3" type="audio/mpeg">
-                Ваш браузер не поддерживает воспроизведение аудио.
-            </audio>
+<audio id="songAudio" preload="metadata">
 
-            <div class="player-top">
+<source
+src="dedushka-song.mp3"
+type="audio/mpeg"
+>
 
-                <button
-                    class="play-button"
-                    id="playButton"
-                    type="button"
-                    aria-label="Воспроизвести песню"
-                >
-                    ▶
-                </button>
+Ваш браузер не поддерживает воспроизведение аудио.
 
-                <div>
-                    <div class="track-name">
-                        Песня о дедушке
-                    </div>
+</audio>
 
-                    <div class="track-status" id="trackStatus">
-                        Нажмите ▶, чтобы начать
-                    </div>
-                </div>
+<div class="player-top">
 
-            </div>
+<button
+class="play-button"
+id="playButton"
+type="button"
+aria-label="Воспроизвести песню"
+>
+▶
+</button>
 
-            <div class="progress-area">
+<div>
 
-                <input
-                    class="progress"
-                    id="progress"
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="0"
-                    step="0.1"
-                    aria-label="Прогресс песни"
-                >
+<div class="track-name">
+Песня о дедушке
+</div>
 
-                <div class="time-row">
-                    <span id="currentTime">0:00</span>
-                    <span id="duration">0:00</span>
-                </div>
+<div class="track-status" id="trackStatus">
+Нажмите ▶, чтобы начать
+</div>
 
-            </div>
+</div>
 
-            <div class="player-bottom">
+</div>
 
-                <span class="volume-icon">🔊</span>
+<div class="progress-area">
 
-                <input
-                    class="volume"
-                    id="volume"
-                    type="range"
-                    min="0"
-                    max="1"
-                    value="1"
-                    step="0.01"
-                    aria-label="Громкость"
-                >
+<input
+class="progress"
+id="progress"
+type="range"
+min="0"
+max="100"
+value="0"
+step="0.1"
+aria-label="Прогресс песни"
+>
 
-            </div>
+<div class="time-row">
 
-        </div>
+<span id="currentTime">
+0:00
+</span>
 
-        <p class="song-note">
-            Эту песню можно слушать прямо на сайте — поставьте её на паузу
-            или перемотайте на нужный момент.
-        </p>
+<span id="duration">
+0:00
+</span>
 
-    </div>
+</div>
+
+</div>
+
+<div class="player-bottom">
+
+<span class="volume-icon">
+🔊
+</span>
+
+<input
+class="volume"
+id="volume"
+type="range"
+min="0"
+max="1"
+value="1"
+step="0.01"
+aria-label="Громкость"
+>
+
+</div>
+
+</div>
+
+<p class="song-note">
+Эту песню можно слушать прямо на сайте — поставьте её на паузу или перемотайте на нужный момент.
+</p>
+
+</div>
 
 </section>
 
 </main>
 
-<div class="final">
-    <h2>
-        Спасибо тебе, <span>дед.</span>
-    </h2>
+<!-- =========================
+FINAL
+========================= -->
 
-    <p>
-        Этот сайт создан Никитой — в подарок человеку,
-        которого невозможно описать одной страницей.
-    </p>
+<div class="final">
+
+<h2>
+Спасибо тебе, <span>дед.</span>
+</h2>
+
+<p>
+Этот сайт создан Никитой — в подарок человеку, которого невозможно описать одной страницей.
+</p>
+
 </div>
 
 <footer>
-    © 2026 Валерий Васильевич Походеев
+© 2026 Валерий Васильевич Походеев
 </footer>
 
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
 <script>
-    const audio = document.getElementById("songAudio");
-    const playButton = document.getElementById("playButton");
-    const progress = document.getElementById("progress");
-    const volume = document.getElementById("volume");
-    const currentTime = document.getElementById("currentTime");
-    const duration = document.getElementById("duration");
-    const trackStatus = document.getElementById("trackStatus");
 
-    function formatTime(seconds) {
-        if (!Number.isFinite(seconds)) return "0:00";
+const audio = document.getElementById("songAudio");
 
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
+const playButton =
+document.getElementById("playButton");
 
-        return minutes + ":" + String(secs).padStart(2, "0");
+const progress =
+document.getElementById("progress");
+
+const volume =
+document.getElementById("volume");
+
+const currentTime =
+document.getElementById("currentTime");
+
+const duration =
+document.getElementById("duration");
+
+const trackStatus =
+document.getElementById("trackStatus");
+
+function formatTime(seconds) {
+
+    if (!Number.isFinite(seconds)) {
+        return "0:00";
     }
 
-    playButton.addEventListener("click", () => {
+    const minutes =
+        Math.floor(seconds / 60);
+
+    const secs =
+        Math.floor(seconds % 60);
+
+    return (
+        minutes +
+        ":" +
+        String(secs).padStart(2, "0")
+    );
+
+}
+
+/* =========================
+PLAY / PAUSE
+========================= */
+
+playButton.addEventListener(
+    "click",
+    () => {
+
         if (audio.paused) {
             audio.play();
         } else {
             audio.pause();
         }
-    });
 
-    audio.addEventListener("play", () => {
+    }
+);
+
+/* =========================
+PLAY
+========================= */
+
+audio.addEventListener(
+    "play",
+    () => {
+
         playButton.textContent = "❚❚";
-        trackStatus.textContent = "Сейчас играет";
-        playButton.setAttribute("aria-label", "Поставить песню на паузу");
-    });
 
-    audio.addEventListener("pause", () => {
+        trackStatus.textContent =
+            "Сейчас играет";
+
+        playButton.setAttribute(
+            "aria-label",
+            "Поставить песню на паузу"
+        );
+
+    }
+);
+
+/* =========================
+PAUSE
+========================= */
+
+audio.addEventListener(
+    "pause",
+    () => {
+
         playButton.textContent = "▶";
-        trackStatus.textContent = "Пауза";
-        playButton.setAttribute("aria-label", "Воспроизвести песню");
-    });
 
-    audio.addEventListener("loadedmetadata", () => {
-        duration.textContent = formatTime(audio.duration);
-    });
+        trackStatus.textContent =
+            "Пауза";
 
-    audio.addEventListener("timeupdate", () => {
-        currentTime.textContent = formatTime(audio.currentTime);
+        playButton.setAttribute(
+            "aria-label",
+            "Воспроизвести песню"
+        );
+
+    }
+);
+
+/* =========================
+METADATA
+========================= */
+
+audio.addEventListener(
+    "loadedmetadata",
+    () => {
+
+        duration.textContent =
+            formatTime(audio.duration);
+
+    }
+);
+
+/* =========================
+PROGRESS
+========================= */
+
+audio.addEventListener(
+    "timeupdate",
+    () => {
+
+        currentTime.textContent =
+            formatTime(audio.currentTime);
 
         if (audio.duration) {
-            progress.value = (audio.currentTime / audio.duration) * 100;
-        }
-    });
 
-    progress.addEventListener("input", () => {
+            progress.value =
+                (audio.currentTime /
+                audio.duration) * 100;
+
+        }
+
+    }
+);
+
+progress.addEventListener(
+    "input",
+    () => {
+
         if (audio.duration) {
-            audio.currentTime = (progress.value / 100) * audio.duration;
+
+            audio.currentTime =
+                (progress.value / 100) *
+                audio.duration;
+
         }
-    });
 
-    volume.addEventListener("input", () => {
-        audio.volume = volume.value;
-    });
+    }
+);
 
-    audio.addEventListener("ended", () => {
+/* =========================
+VOLUME
+========================= */
+
+volume.addEventListener(
+    "input",
+    () => {
+
+        audio.volume =
+            volume.value;
+
+    }
+);
+
+/* =========================
+END
+========================= */
+
+audio.addEventListener(
+    "ended",
+    () => {
+
         playButton.textContent = "▶";
-        trackStatus.textContent = "Песня закончилась";
+
+        trackStatus.textContent =
+            "Песня закончилась";
+
         progress.value = 0;
-    });
 
-    audio.addEventListener("error", () => {
-        trackStatus.textContent = "Файл песни пока не найден";
-    });
+    }
+);
+
+/* =========================
+AUDIO ERROR
+========================= */
+
+audio.addEventListener(
+    "error",
+    () => {
+
+        trackStatus.textContent =
+            "Файл песни пока не найден";
+
+    }
+);
+
 </script>
 
 </body>
